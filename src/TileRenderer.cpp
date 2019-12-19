@@ -134,7 +134,7 @@ void TileRenderer::compileShader(unsigned int shader, const char** ppShaderSrc)
 {
 	glShaderSource(shader, 1, ppShaderSrc, nullptr);
 	glCompileShader(shader);
-#ifdef DEBUG
+#ifdef _DEBUG
 	int success;
 	glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
 	if(!success)
@@ -154,7 +154,7 @@ void TileRenderer::linkProgram(unsigned int vertexShader, unsigned int fragmentS
 	glAttachShader(s_Shader, fragmentShader);
 	glLinkProgram(s_Shader);
 
-#ifdef DEBUG
+#ifdef _DEBUG
 	int success;
 	glGetShaderiv(s_Shader, GL_LINK_STATUS, &success);
 	if(!success)
