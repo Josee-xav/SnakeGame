@@ -78,8 +78,8 @@ void TileRenderer::initVaoAndEbo()
 		0, 1, 2,
 		0, 2, 3
 	};
-
-	glCreateVertexArrays(1, &s_Vao);
+	
+	glGenVertexArrays(1, &s_Vao);
 	glGenBuffers(1, &s_Vbo);
 	glGenBuffers(1, &s_Ebo);
 
